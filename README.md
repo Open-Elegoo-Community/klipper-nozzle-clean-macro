@@ -81,11 +81,11 @@ The macro can process a `FILAMENT_TYPE` variable to automatically select the cor
 **Remember to SAVE & RESTART after variable changes**
 
 ## Contributing
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature-name`.
-3. Make your changes.
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature-name`
+3. Make your changes
 4. Push your branch: `git push origin feature-name`.
-5. Create a pull request.
+5. Create a pull request
 
 ## License
 This project is licensed under the [GPL-3.0 license](LICENSE).
