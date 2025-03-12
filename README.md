@@ -8,11 +8,18 @@ This macro is designed for use with the following wiper holder model:
 It can be adjusted for other wiper models, but those modifications are currently unsupported. If you need help, feel free to open an issue.
 
 ## Table of Contents
-- [Usage](#usage-guide)
+- [Installation](#installation)
+- [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 
-## Usage Guide
+## Installation
+1. Copy the latest stable release from [Latest Release](#nozzle_clean.cfg)
+2. Add content of `CLEAN_NOZZLE` to your **printer.cfg**
+*Info: The placement of CLEAN_NOZZLE is not relevant. I suggest to place if right before the **SAVE_CONFIG** part*
+3. **Save & Restart** your printer configuration.
+
+## Usage
 To ensure the CLEAN_NOZZLE macro functions correctly, adjust the following configuration values based on your printer and wiper setup.
 
 ### 1. Cleaning Height
@@ -47,9 +54,9 @@ Defines how many complete cleaning cycles are executed.
 The macro can process a `FILAMENT_TYPE` variable to automatically select the correct nozzle temperature for cleaning.
 **Important Notes:**
 - Automatic temperature selection only works if the `CLEAN_NOZZLE` macro is called within the `PRINT_START` macro.
-- You need to modify both your** slicer** settings and **printer.cfg** for proper functionality.
+- You need to modify both your **slicer** printer start config and **printer.cfg** for proper functionality.
 
-#### Step-by-Step Setup:
+#### Enable automatic Filament processing
 ##### Step 1: Modify Your Slicer’s Start G-code
 1. Open your slicer and navigate to machine settings.
 2. Go to the **Machine Start G-code** section.
@@ -67,9 +74,11 @@ The macro can process a `FILAMENT_TYPE` variable to automatically select the cor
 1. Add the `CLEAN_NOZZLE` macro with filament variable after heating the print bed and nozzle to the desired temperature.
 `CLEAN_NOZZLE FILAMENT_TYPE={FILAMENT_TYPE}`
 
-##### Step 4: Save & Restart
+##### Step 4: SAVE & Restart
 1. **Save & Restart** your printer configuration.
 2. Your nozzle cleaning macro is now fully integrated.
+
+**Remember to SAVE & RESTART after variable changes**
 
 ## Contributing
 1. Fork the repository.
