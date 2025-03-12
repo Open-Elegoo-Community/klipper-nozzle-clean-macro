@@ -14,7 +14,7 @@ It can be adjusted for other wiper models, but those modifications are currently
 - [License](#license)
 
 ## Installation
-1. Copy the latest stable release from [Latest Release](#nozzle_clean.cfg)
+1. Copy the latest stable release from [Latest Release](./nozzle_clean.cfg)
 2. Add content of `CLEAN_NOZZLE` to your **printer.cfg**
 *Info: The placement of CLEAN_NOZZLE is not relevant. I suggest to place if right before the **SAVE_CONFIG** part*
 3. **Save & Restart** your printer configuration.
