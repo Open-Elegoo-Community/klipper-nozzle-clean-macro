@@ -3,7 +3,7 @@
 A Klipper macro for automatic nozzle cleaning, originally created for the Elegoo Neptune 3/4 but compatible with all Klipper-based 3D printers.
 
 This macro is designed for use with the following wiper holder model:  
-[Neptune 4 Corner Alignment Guides](https://www.printables.com/refresh?redirectUrl=%2Fmodel%2F1196153-neptune-4-corner-alignment-guides)
+[Neptune 4 Corner Alignment Guides](https://www.printables.com/model/1196153-neptune-4-corner-alignment-guides)
 
 It can be adjusted for other wiper models, but those modifications are currently unsupported. If you need help, feel free to open an issue.
 
