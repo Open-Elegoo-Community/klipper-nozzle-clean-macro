@@ -1,11 +1,16 @@
 # Klipper Nozzle Cleaning Macro
 
+**This macro is still in beta and is currently being tested by several community members. Feel free to participate in the testing and contribute your feedback!**
+
 A Klipper macro for automatic nozzle cleaning, originally created for the Elegoo Neptune 3/4 but compatible with all Klipper-based 3D printers.
 
 This macro is designed for use with the following wiper holder model:  
-[Neptune 4 Corner Alignment Guides](https://www.printables.com/model/1196153-neptune-4-corner-alignment-guides)
+[Neptune 4 Base/Pro/Max Corner Alignment Guides](https://www.printables.com/model/1196153-neptune-4-corner-alignment-guides-promax)  
+[Neptune 4 Plus Corner Alignment Guides](https://www.printables.com/model/1221208-neptune-4-plus-corner-guide-with-wiper)
 
-It can be adjusted for other wiper models, but those modifications are currently unsupported. If you need help, feel free to open an issue.
+The macro can be adjusted for other wiper models, but these modifications are currently unsupported. However, we are open to supporting additional wiper models once they have been tested by relevant testers. Feel free to create a feature branch and submit a PR for review.
+
+If you have any questions or would like to discuss the macro, please use this [channel](https://discord.com/channels/969282195552346202/1342271498915807243) in the Elegoo Discord.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -15,14 +20,17 @@ It can be adjusted for other wiper models, but those modifications are currently
 
 ## Installation
 1. Copy the latest stable release from [Latest Release](./nozzle_clean.cfg)
-2. Add content of `CLEAN_NOZZLE` to your **printer.cfg**
-*Info: The placement of CLEAN_NOZZLE is not relevant. I suggest to place if right before the **SAVE_CONFIG** part*
+2. Add content of `CLEAN_NOZZLE` to your **printer.cfg**  
+*Info: The placement of CLEAN_NOZZLE is not relevant.*  
+*I suggest to place if right before the **SAVE_CONFIG** part*
 3. **Save & Restart** your printer configuration.
 
 ## Usage
 To ensure the CLEAN_NOZZLE macro functions correctly, adjust the following configuration values based on your printer and wiper setup.
 
 ### 1. Cleaning Height
+**Important: We strongly recommend performing a fresh `SCREWS_TILT_CALIBRATE` and `PROBE_CALIBRATE` (or `CARTO_CALIBRATE`) before setting the cleaningHeight to prevent potential damage!**
+
 - **`cleaningHeight`** (default: `10`)
   Defines the nozzle height while cleaning in the wiper.
 
