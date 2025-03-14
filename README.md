@@ -5,7 +5,7 @@
 A Klipper macro for automatic nozzle cleaning, originally created for the Elegoo Neptune 3/4 but compatible with all Klipper-based 3D printers.
 
 This macro is designed for use with the following wiper holder model:  
-[Neptune 4 Base/Pro/Max Corner Alignment Guides](https://www.printables.com/model/1196153-neptune-4-corner-alignment-guides-promax)
+[Neptune 4 Base/Pro/Max Corner Alignment Guides](https://www.printables.com/model/1196153-neptune-4-corner-alignment-guides-promax)  
 [Neptune 4 Plus Corner Alignment Guides](https://www.printables.com/model/1221208-neptune-4-plus-corner-guide-with-wiper)
 
 The macro can be adjusted for other wiper models, but these modifications are currently unsupported. However, we are open to supporting additional wiper models once they have been tested by relevant testers. Feel free to create a feature branch and submit a PR for review.
@@ -21,7 +21,8 @@ If you have any questions or would like to discuss the macro, please use this [c
 ## Installation
 1. Copy the latest stable release from [Latest Release](./nozzle_clean.cfg)
 2. Add content of `CLEAN_NOZZLE` to your **printer.cfg**  
-*Info: The placement of CLEAN_NOZZLE is not relevant. I suggest to place if right before the **SAVE_CONFIG** part*
+*Info: The placement of CLEAN_NOZZLE is not relevant.*  
+*I suggest to place if right before the **SAVE_CONFIG** part*
 3. **Save & Restart** your printer configuration.
 
 ## Usage
