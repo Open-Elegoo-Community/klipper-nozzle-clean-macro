@@ -29,7 +29,7 @@ If you have any questions or would like to discuss the macro, please use this [c
 To ensure the CLEAN_NOZZLE macro functions correctly, adjust the following configuration values based on your printer and wiper setup.
 
 ### 1. Cleaning Height
-**Important: We strongly recommend performing a fresh `SCREWS_TILT_CALIBRATE` and `PROBE_CALIBRATE` (or `CARTO_CALIBRATE`) before setting the cleaningHeight to prevent potential damage!**
+**Important: We strongly recommend performing a fresh `SCREWS_TILT_CALIBRATE` and `PROBE_CALIBRATE` (or `CARTO_CALIBRATE`) after installing the wiper holder and before setting `cleaningHeight` to prevent potential damage!**
 
 - **`cleaningHeight`** (default: `10`)
   Defines the nozzle height while cleaning in the wiper.
