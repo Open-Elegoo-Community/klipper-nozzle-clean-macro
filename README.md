@@ -45,7 +45,7 @@ To ensure the CLEAN_NOZZLE macro functions correctly, adjust the following confi
   Maximum Y-coordinate of the bed’s edge.
   Set this to the physical limit of the bed's Y-axis (not the nozzle).
   **Examples:**
-  - Neptune 4 → `235`
+  - Neptune 4 → `229`
   - Neptune 4 Plus → `330`
   - Neptune 4 Max → `430`
 
