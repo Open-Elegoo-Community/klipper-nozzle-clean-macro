@@ -41,7 +41,7 @@ To ensure the CLEAN_NOZZLE macro functions correctly, adjust the following confi
   - `X` → The nozzle moves.
 
 ### 3. Printer Bed Size
-- **`printerBedYMax`** (default: `235`)
+- **`printerBedYMax`** (default: `229`)
   Maximum Y-coordinate of the bed’s edge.
   Set this to the physical limit of the bed's Y-axis (not the nozzle).
   **Examples:**
