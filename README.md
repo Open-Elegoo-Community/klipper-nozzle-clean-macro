@@ -31,7 +31,7 @@ To ensure the CLEAN_NOZZLE macro functions correctly, adjust the following confi
 ### 1. Cleaning Height
 **Important: We strongly recommend performing a fresh `SCREWS_TILT_CALIBRATE` and `PROBE_CALIBRATE` (or `CARTO_CALIBRATE`) after installing the wiper holder and before setting `cleaningHeight` to prevent potential damage!**
 
-- **`cleaningHeight`** (default: `10`)
+- **`cleaningHeight`** (default: `30`)
   Defines the nozzle height while cleaning in the wiper.
 
 ### 2. Wiping Axis Selection
@@ -46,6 +46,7 @@ To ensure the CLEAN_NOZZLE macro functions correctly, adjust the following confi
   Set this to the physical limit of the bed's Y-axis (not the nozzle).
   **Examples:**
   - Neptune 4 → `229`
+  - Neptune 4 Pro → `229`
   - Neptune 4 Plus → `330`
   - Neptune 4 Max → `430`
 
