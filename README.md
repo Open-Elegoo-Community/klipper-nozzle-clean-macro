@@ -50,15 +50,20 @@ To ensure the CLEAN_NOZZLE macro functions correctly, adjust the following confi
   - Neptune 4 Max → `430`
 
 ### 4. cleaningLoops
-- **`cleaningLoops`** 
-Defines how many complete cleaning cycles are executed.
+- **`cleaningLoops`** Defines how many complete cleaning cycles are executed.
 - **Example:**
   - `cleaningLoops = 1`  
       Executes three passes (first, second, and third pass).
     - `cleaningLoops = 2`  
       Executes six passes (three passes repeated twice).
 
-### 5. Filament Processing
+### 5. purgeShake
+- Disable (0) or enable (1) quick left / right moves before cleaning to remove ouzed filament
+
+### 6. debug
+- Disable (0) or enable (1) verbose macro messages - useful for debugging
+
+### 7. Filament Processing
 The macro can process a `FILAMENT_TYPE` variable to automatically select the correct nozzle temperature for cleaning.
 **Important Notes:**
 - Automatic temperature selection only works if the `CLEAN_NOZZLE` macro is called within the `PRINT_START` macro.
