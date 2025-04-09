@@ -31,7 +31,7 @@ To ensure the CLEAN_NOZZLE macro functions correctly, adjust the following confi
 ### 1. Cleaning Height
 **Important: We strongly recommend performing a fresh `SCREWS_TILT_CALIBRATE` and `PROBE_CALIBRATE` (or `CARTO_CALIBRATE`) after installing the wiper holder and before setting `cleaningHeight` to prevent potential damage!**
 
-- **`cleaningHeight`** (default: `10`)
+- **`cleaningHeight`** (default: `30`)
   Defines the nozzle height while cleaning in the wiper.
 
 ### 2. Wiping Axis Selection
@@ -41,24 +41,30 @@ To ensure the CLEAN_NOZZLE macro functions correctly, adjust the following confi
   - `X` → The nozzle moves.
 
 ### 3. Printer Bed Size
-- **`printerBedYMax`** (default: `235`)
+- **`printerBedYMax`** (default: `229`)
   Maximum Y-coordinate of the bed’s edge.
   Set this to the physical limit of the bed's Y-axis (not the nozzle).
   **Examples:**
-  - Neptune 4 → `235`
+  - Neptune 4 → `229`
+  - Neptune 4 Pro → `229`
   - Neptune 4 Plus → `330`
   - Neptune 4 Max → `430`
 
 ### 4. cleaningLoops
-- **`cleaningLoops`** 
-Defines how many complete cleaning cycles are executed.
+- **`cleaningLoops`** Defines how many complete cleaning cycles are executed.
 - **Example:**
   - `cleaningLoops = 1`  
       Executes three passes (first, second, and third pass).
     - `cleaningLoops = 2`  
       Executes six passes (three passes repeated twice).
 
-### 5. Filament Processing
+### 5. purgeShake
+- Disable (0) or enable (1) quick left / right moves before cleaning to remove ouzed filament
+
+### 6. debug
+- Disable (0) or enable (1) verbose macro messages - useful for debugging
+
+### 7. Filament Processing
 The macro can process a `FILAMENT_TYPE` variable to automatically select the correct nozzle temperature for cleaning.
 **Important Notes:**
 - Automatic temperature selection only works if the `CLEAN_NOZZLE` macro is called within the `PRINT_START` macro.
