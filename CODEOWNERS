@@ -1,0 +1,13 @@
+# Codeowners file
+
+# Global default owners
+* @open-elegoo-community/contributors
+
+# License owner
+/LICENSE @Beattune @open-elegoo-community/contributors
+
+# Klipper Macro for automatic nozzle cleaning
+/nozzle_clean.cfg @Beattune @open-elegoo-community/contributors
+
+# Readme file with installation and usage guides
+/README.md @Beattune @open-elegoo-community/contributors
