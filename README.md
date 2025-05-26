@@ -23,12 +23,10 @@
   > **Note:**
   > We publish 2 branches for the klipper nozzle clean macro. The stable branch, which is recommended to use, is main. If you wan't to check out the latest development, the dev branch might be for you.
 
-  1. SSH into your Klipper device and execute the following commands:
+  1. `SSH` into your Klipper device and execute the following commands:
     ```bash
     cd ~
-
     git clone https://github.com/Open-Elegoo-Community/klipper-nozzle-clean-macro.git
-
     ln -s ~/klipper-nozzle-clean-macro/macro/*.cfg printer_data/config/
     ```
 
