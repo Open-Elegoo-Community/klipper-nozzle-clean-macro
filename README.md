@@ -1,14 +1,12 @@
 # Klipper Nozzle Cleaning Macro
 
-**This macro is still in beta and is currently being tested by several community members. Feel free to participate in the testing and contribute your feedback!**
-
 A Klipper macro for automatic nozzle cleaning, originally created for the Elegoo Neptune 3/4 but compatible with all Klipper-based 3D printers.
 
 This macro is designed for use with the following wiper holder model:  
 [Neptune 4 Base/Pro/Max Corner Alignment Guides](https://www.printables.com/model/1196153-neptune-4-corner-alignment-guides-promax)  
 [Neptune 4 Plus Corner Alignment Guides](https://www.printables.com/model/1221208-neptune-4-plus-corner-guide-with-wiper)
 
-The macro can be adjusted for other wiper models, but these modifications are currently unsupported. However, we are open to supporting additional wiper models once they have been tested by relevant testers. Feel free to create a feature branch and submit a PR for review.
+The macro can be adjusted for other wiper models, but these modifications need proper testing and implementation from us. Feel free to create a feature branch and submit a PR for review.
 
 If you have any questions or would like to discuss the macro, please use this [channel](https://discord.com/channels/969282195552346202/1342271498915807243) in the Elegoo Discord.
 
@@ -19,14 +17,45 @@ If you have any questions or would like to discuss the macro, please use this [c
 - [License](#license)
 
 ## Installation
-1. Copy the latest stable release from [Latest Release](./nozzle_clean.cfg)
-2. Add content of `CLEAN_NOZZLE` to your **printer.cfg**  
-*Info: The placement of CLEAN_NOZZLE is not relevant.*  
-*I suggest to place if right before the **SAVE_CONFIG** part*
-3. **Save & Restart** your printer configuration.
 
-## Usage
-To ensure the CLEAN_NOZZLE macro functions correctly, adjust the following configuration values based on your printer and wiper setup.
+The cleanest and easiest way to get started with KNCM is to use Moonraker's Update Manager utility. This will allow you to easily install and helps to provide future updates when more features are rolled out!
+
+> **Note:**
+> We publish 2 branches for the klipper nozzle clean macro. The stable branch, which is recommended to use, is main. If you wan't to check out the latest development, the dev branch might be for you.
+
+1. `SSH` into your Klipper device and execute the following commands:
+```bash
+cd ~
+git clone https://github.com/Open-Elegoo-Community/klipper-nozzle-clean-macro.git
+ln -s ~/klipper-nozzle-clean-macro/macro/*.cfg printer_data/config/
+```
+
+> **Note:**
+> This will change to the home directory, clone the KNCM repo, create a symbolic link of the repo macro files to your printer's config folder.
+> 
+> It is also possible that with older setups of klipper or moonraker that your config path will be different. Be sure to use the correct config path for your machine when making the symbolic link.
+
+2. Open your `moonraker.conf`file and add this configuration
+```yaml
+
+[update_manager Klipper-Nozzle-Clean-Macro]
+type: git_repo
+path: ~/klipper-nozzle-clean-macro
+origin: https://github.com/Open-Elegoo-Community/klipper-nozzle-clean-macro.git
+managed_services: klipper
+primary_branch: main
+
+```
+
+> **Note:**
+> Whenever Moonraker configurations are changed, it must be restarted for changes to take effect. 
+> If you do not want Moonraker to notify you of future updates to KNCM, feel free to skip this.
+
+## How to use `nozzle_clean_settings.cfg`
+>**Note:**
+> For ease of use and understanding, all KNCM configuration is contained inside of `nozzle_clean_settings.cfg`. Any changes you wish to make to KNCM specifically can be found here.
+>
+> To ensure the CLEAN_NOZZLE macro functions correctly, adjust the following configuration values based on your printer and wiper setup.
 
 ### 1. Cleaning Height
 **Important: We strongly recommend performing a fresh `SCREWS_TILT_CALIBRATE` and `PROBE_CALIBRATE` (or `CARTO_CALIBRATE`) after installing the wiper holder and before setting `cleaningHeight` to prevent potential damage!**
@@ -55,8 +84,8 @@ To ensure the CLEAN_NOZZLE macro functions correctly, adjust the following confi
 - **Example:**
   - `cleaningLoops = 1`  
       Executes three passes (first, second, and third pass).
-    - `cleaningLoops = 2`  
-      Executes six passes (three passes repeated twice).
+  - `cleaningLoops = 2`  
+    Executes six passes (three passes repeated twice).
 
 ### 5. purgeShake
 - Disable (0) or enable (1) quick left / right moves before cleaning to remove ouzed filament
