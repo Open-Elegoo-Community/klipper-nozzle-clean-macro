@@ -27,7 +27,8 @@ The cleanest and easiest way to get started with KNCM is to use Moonraker's Upda
 ```bash
 cd ~
 git clone https://github.com/Open-Elegoo-Community/klipper-nozzle-clean-macro.git
-ln -s ~/klipper-nozzle-clean-macro/macro printer_data/config/KNCM
+ln -s ~/klipper-nozzle-clean-macro/macros printer_data/config/KNCM
+cp ~/klipper-nozzle-clean-macro/macro/clean_nozzle_settings.cfg ~/printer_data/config/clean_nozzle_settings.cfg
 ```
 
 > **Note:**
@@ -50,6 +51,7 @@ primary_branch: main
 > If you do not want Moonraker to notify you of future updates to KNCM, feel free to skip this.
 
 3. Open your `printer.cfg` file and include the `clean_nozzle_settings.cfg`
+Search for your `[include XXX]` objects and append `[include KNCM_settings.cfg]` file.
 
 ## How to use `nozzle_clean_settings.cfg`
 >**Note:**
