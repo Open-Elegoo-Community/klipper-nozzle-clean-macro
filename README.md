@@ -25,9 +25,11 @@
 
   1. `SSH` into your Klipper device and execute the following commands:
     ```bash
+    
     cd ~
     git clone https://github.com/Open-Elegoo-Community/klipper-nozzle-clean-macro.git
     ln -s ~/klipper-nozzle-clean-macro/macro/*.cfg printer_data/config/
+    
     ```
 
     > **Note:**
@@ -37,12 +39,14 @@
 
   2. Open your `moonraker.conf`file and add this configuration
     ```yaml
+
     [update_manager Klipper-Nozzle-Clean-Macro]
     type: git_repo
     path: ~/klipper-nozzle-clean-macro
     origin: https://github.com/Open-Elegoo-Community/klipper-nozzle-clean-macro.git
     managed_services: klipper
     primary_branch: main
+    
     ```
 
     > **Note:**
