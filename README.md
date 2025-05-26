@@ -48,11 +48,13 @@ primary_branch: main
 ```
 
 > **Note:**
-> Whenever Moonraker configurations are changed, it must be restarted for changes to take effect. If you do not want Moonraker to notify you of future updates to KNCM, feel free to skip this.
+> Whenever Moonraker configurations are changed, it must be restarted for changes to take effect. 
+> If you do not want Moonraker to notify you of future updates to KNCM, feel free to skip this.
 
 ## How to use `nozzle_clean_settings.cfg`
 >**Note:**
 > For ease of use and understanding, all KNCM configuration is contained inside of `nozzle_clean_settings.cfg`. Any changes you wish to make to KNCM specifically can be found here.
+>
 > To ensure the CLEAN_NOZZLE macro functions correctly, adjust the following configuration values based on your printer and wiper setup.
 
 ### 1. Cleaning Height
@@ -82,8 +84,8 @@ primary_branch: main
 - **Example:**
   - `cleaningLoops = 1`  
       Executes three passes (first, second, and third pass).
-    - `cleaningLoops = 2`  
-      Executes six passes (three passes repeated twice).
+  - `cleaningLoops = 2`  
+    Executes six passes (three passes repeated twice).
 
 ### 5. purgeShake
 - Disable (0) or enable (1) quick left / right moves before cleaning to remove ouzed filament
