@@ -21,7 +21,7 @@ If you have any questions or would like to discuss the macro, please use this [c
 The cleanest and easiest way to get started with KNCM is to use Moonraker's Update Manager utility. This will allow you to easily install and helps to provide future updates when more features are rolled out!
 
 > **Note:**
-> We publish 2 branches for the klipper nozzle clean macro. The stable branch, which is recommended to use, is main. If you wan't to check out the latest development, the dev branch might be for you.
+> We publish 2 branches for the klipper nozzle clean macro. The stable branch, which is recommended to use, is main. If you wan't to check out the newest changes, the beta branch might be for you.
 
 1. `SSH` into your Klipper device and execute the following commands:
 ```bash
@@ -49,6 +49,7 @@ primary_branch: main
 > **Note:**
 > Whenever Moonraker configurations are changed, it must be restarted for changes to take effect. 
 > If you do not want Moonraker to notify you of future updates to KNCM, feel free to skip this.
+> To use the beta branch just exchange main to beta in primary_branch setting
 
 3. Open your `printer.cfg` file and include the `clean_nozzle_settings.cfg`
 Search for your `[include XXX]` objects and append `[include KNCM_settings.cfg]` file.
