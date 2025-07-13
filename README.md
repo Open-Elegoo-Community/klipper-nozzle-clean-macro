@@ -84,7 +84,7 @@ Search for your `[include XXX]` objects and append `[include KNCM_settings.cfg]`
 ### 3. Printer Bed Size
 - **`printer_bed_y_max`** (default: `229`)
   - Maximum Y-coordinate of the bed’s edge.
-  - Set this to the physical limit of the bed's Y-axis (not the nozzle).
+    - Set this to the physical limit of the bed's Y-axis (not the nozzle).
   - **Examples:**
     - Neptune 4 → `229`
     - Neptune 4 Pro → `229`
@@ -115,9 +115,9 @@ Search for your `[include XXX]` objects and append `[include KNCM_settings.cfg]`
     - if set to (0) the macro will not change the printer acceleration
 
 ### 9. Speed settings
-- Set which speed limits will be set for nozzle cleaning and travel
+- Set which speed limits will be used for nozzle cleaning and travel
   - **9.1 Travel speed**
-    - **`tavel_speed`** (default: `350`)
+    - **`travel_speed`** (default: `350`)
       - Set travel speed
   - **9.2 Slow speed**
     - **`slow_speed`** (default: `250`)
