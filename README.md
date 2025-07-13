@@ -60,7 +60,7 @@ primary_branch: main
 > If you do not want Moonraker to notify you of future updates to KNCM, feel free to skip this.
 > If you used the beta branch, then just exchange main to beta in primary_branch setting
 
-### 3. Open your `printer.cfg` file and include the `clean_nozzle_settings.cfg`
+### 3. Open your `printer.cfg` file and include the `KNCM_settings.cfg`
 Search for your `[include XXX]` objects and append `[include KNCM_settings.cfg]` file.
 
 ## How to use `nozzle_clean_settings.cfg`
