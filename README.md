@@ -70,34 +70,35 @@ Search for your `[include XXX]` objects and append `[include KNCM_settings.cfg]`
 > To ensure the CLEAN_NOZZLE macro functions correctly, adjust the following configuration values based on your printer and wiper setup.
 
 ### 1. Cleaning Height
-**Important: We strongly recommend performing a fresh `SCREWS_TILT_CALIBRATE` and `PROBE_CALIBRATE` (or `CARTO_CALIBRATE`) after installing the wiper holder and before setting `cleaningHeight` to prevent potential damage!**
+**Important: We strongly recommend performing a fresh `SCREWS_TILT_CALIBRATE` and `PROBE_CALIBRATE` (or `CARTO_CALIBRATE`) after installing the wiper holder and before setting `cleaning_height` to prevent potential damage!**
 
-- **`cleaningHeight`** (default: `30`)
-  Defines the nozzle height while cleaning in the wiper.
+- **`cleaning_height`** (default: `30`)
+  - Defines the nozzle height while cleaning in the wiper.
 
 ### 2. Wiping Axis Selection
-- **`wipingAxis`** (default: `Y`)
-  Determines which axis moves during cleaning.
-  - `Y` → The bed moves.
-  - `X` → The nozzle moves.
+- **`wiping_axis`** (default: `Y`)
+  - Determines which axis moves during cleaning.
+    - `Y` → The bed moves.
+    - `X` → The nozzle moves.
 
 ### 3. Printer Bed Size
-- **`printerBedYMax`** (default: `229`)
-  Maximum Y-coordinate of the bed’s edge.
-  Set this to the physical limit of the bed's Y-axis (not the nozzle).
-  **Examples:**
-  - Neptune 4 → `229`
-  - Neptune 4 Pro → `229`
-  - Neptune 4 Plus → `330`
-  - Neptune 4 Max → `430`
+- **`printer_bed_y_max`** (default: `229`)
+  - Maximum Y-coordinate of the bed’s edge.
+  - Set this to the physical limit of the bed's Y-axis (not the nozzle).
+  - **Examples:**
+    - Neptune 4 → `229`
+    - Neptune 4 Pro → `229`
+    - Neptune 4 Plus → `330`
+    - Neptune 4 Max → `430`
 
 ### 4. Cleaning Loops
-- **`cleaningLoops`** Defines how many complete cleaning cycles are executed.
-- **Example:**
-  - `cleaningLoops = 1`  
+- **`cleaning_oops`**
+  - Defines how many complete cleaning cycles are executed.
+  - **Example:**
+    - `cleaning_loops = 1`  
       Executes three passes (first, second, and third pass).
-  - `cleaningLoops = 2`  
-    Executes six passes (three passes repeated twice).
+    - `cleaning_loops = 2`  
+      Executes six passes (three passes repeated twice).
 
 ### 5. Purge Shake
 - Disable (0) or enable (1) quick left / right moves before cleaning to remove ouzed filament
@@ -109,19 +110,21 @@ Search for your `[include XXX]` objects and append `[include KNCM_settings.cfg]`
 - Disable (0) or enable (1) verbose macro messages - useful for debugging
 
 ### 8. Acceleration
-- Set which acceleration will be used for nozzle cleaning - if set to (0) the macro will not change the printer acceleration
+- **`acceleration`** (default `0`)
+  - Set which acceleration will be used for nozzle cleaning
+    - if set to (0) the macro will not change the printer acceleration
 
 ### 9. Speed settings
 - Set which speed limits will be set for nozzle cleaning and travel
-
-#### 9.1 Travel speed
-- Set travel speed
-
-#### 9.2 Slow speed
-- Set the speed which will be used to perform the slow motions to loosen filament on the nozzle
-
-#### 9.3 Fast speed
-- Set the speed which will be used to perform fast motions to clean the nozzle
+  - **9.1 Travel speed**
+    - **`tavel_speed`** (default: `350`)
+      - Set travel speed
+  - **9.2 Slow speed**
+    - **`slow_speed`** (default: `250`)
+      - Set the speed which will be used to perform the slow motions to loosen filament on the nozzle
+  - **9.3 Fast speed**
+    - **`fast_speed`** (default: `500`)
+      - Set the speed which will be used to perform fast motions to clean the nozzle
 
 ### 10. Cleaning temperatures
 - Adjust which nozzle temperatures will be used for each filament when cleaning
