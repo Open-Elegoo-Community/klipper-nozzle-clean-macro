@@ -92,7 +92,7 @@ Search for your `[include XXX]` objects and append `[include KNCM_settings.cfg]`
     - Neptune 4 Max → `430`
 
 ### 4. Cleaning Loops
-- **`cleaning_oops`**
+- **`cleaning_loops`** (default: `1`)
   - Defines how many complete cleaning cycles are executed.
   - **Example:**
     - `cleaning_loops = 1`  
@@ -116,15 +116,18 @@ Search for your `[include XXX]` objects and append `[include KNCM_settings.cfg]`
 
 ### 9. Speed settings
 - Set which speed limits will be used for nozzle cleaning and travel
-  - **9.1 Travel speed**
-    - **`travel_speed`** (default: `350`)
-      - Set travel speed
-  - **9.2 Slow speed**
-    - **`slow_speed`** (default: `250`)
-      - Set the speed which will be used to perform the slow motions to loosen filament on the nozzle
-  - **9.3 Fast speed**
-    - **`fast_speed`** (default: `500`)
-      - Set the speed which will be used to perform fast motions to clean the nozzle
+  
+**9.1 Travel speed**
+- **`travel_speed`** (default: `350`)
+  - Set travel speed
+
+**9.2 Slow speed**
+- **`slow_speed`** (default: `250`)
+  - Set the speed which will be used to perform the slow motions to loosen filament on the nozzle
+
+**9.3 Fast speed**
+- **`fast_speed`** (default: `500`)
+  - Set the speed which will be used to perform fast motions to clean the nozzle
 
 ### 10. Cleaning temperatures
 - Adjust which nozzle temperatures will be used for each filament when cleaning
