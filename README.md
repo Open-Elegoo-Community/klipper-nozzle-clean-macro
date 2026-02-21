@@ -8,7 +8,7 @@ This macro is designed for use with the following wiper holder model:
 
 The macro can be adjusted for other wiper models, but these modifications need proper testing and implementation from us. Feel free to create a feature branch and submit a PR for review.
 
-If you have any questions or would like to discuss the macro, please use this [channel](https://discord.com/channels/969282195552346202/1342271498915807243) in the Elegoo Discord.
+If you have any questions or would like to discuss the macro, please use this [channel](https://discord.com/channels/969282195552346202/1416134518724755629) in the Elegoo Discord.
 
 ## Table of Contents
 - [Installation](#installation)
